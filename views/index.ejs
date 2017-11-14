@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fox Dashboard</title>
+</head>
+<body>
+	<h1>All Foxes</h1>
+	<% if (foxes) {%>
+		<ul>
+		<% for (let x of foxes) { %>
+			<li><a href="/foxes/<%= x._id %>"><%= x.name %></a> <a href="/foxes/edit/<%= x._id %>"><button>Edit</button></a> <form action="/foxes/destroy/<%= x._id %>" method="POST"><input type="submit" value="Delete"> </form></li>
+		<% } %>
+		</ul>
+	<% } %>
+
+	<a href="/foxes/new">Add a new Fox</a>
+</body>
+</html>

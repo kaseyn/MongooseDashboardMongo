@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit</title>
+</head>
+<body>
+	<fieldset>
+		<legend>Edit <%= fox.name %></legend>
+		<form action="/foxes/<%= fox._id %>" method="POST">
+			<label>Name:</label>
+			<input type="text" name="name" value="<%= fox.name %>">
+			<label>Description:</label>
+			<input type="text" name="description" value="<%= fox.description %>">
+			<input type="submit">
+		</form>
+	</fieldset>
+
+</body>
+</html>
